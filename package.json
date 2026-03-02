@@ -1,0 +1,103 @@
+{
+  "name": "@ogs-gmbh/react-hooks",
+  "version": "1.0.0",
+  "description": "Composable Hooks for React applications.",
+  "keywords": [
+    "react-hooks",
+    "react",
+    "custom-hooks",
+    "hooks-library",
+    "useEffect",
+    "useState",
+    "useMemo",
+    "useCallback",
+    "useRef",
+    "useContext",
+    "react-utils",
+    "state-management",
+    "side-effects",
+    "lifecycle-management",
+    "composition-api",
+    "frontend",
+    "typescript",
+    "react-performance",
+    "reusable-hooks",
+    "functional-components"
+  ],
+  "homepage": "https://ogs-gmbh.github.io/react-hooks/",
+  "bugs": "https://github.com/OGS-GmbH/react-hooks/issues",
+  "license": "MIT",
+  "author": "OGS GmbH",
+  "contributors": [
+    {
+      "name": "Simon Kovtyk",
+      "email": "simon@kovtyk.com",
+      "url": "https://simonkov.dev"
+    }
+  ],
+  "exports": {
+    ".": {
+      "types": "./public-api.d.ts",
+      "default": "./public-api.mjs"
+    }
+  },
+  "repository": "https://github.com/OGS-GmbH/react-hooks",
+  "type": "module",
+  "scripts": {
+    "ci:build:main:production": "node .esbuild/build.mjs",
+    "ci:docs:extract:typedoc": "typedoc",
+    "ci:docs:main:vitepress": "bash ./.vitepress/scripts/pre-vitepress.sh && vitepress build .vitepress",
+    "ci:pr:commitlint:main:commitlint": "commitlint",
+    "ci:pr:lint:main:eslint": "eslint .",
+    "ci:pr:lint:main:oxlint": "oxlint",
+    "ci:test:main:vitest": "vitest run --coverage",
+    "commit": "commit",
+    "prepare": "husky",
+    "vitepress": "bash ./.vitepress/scripts/pre-vitepress.sh && vitepress dev .vitepress",
+    "vitepress:preview": "vitepress preview .vitepress"
+  },
+  "dependencies": {
+    "react": "^19.2.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "@commitlint/prompt-cli": "^20.5.0",
+    "@eslint/json": "^0.14.0",
+    "@eslint/markdown": "^7.5.1",
+    "@ogs-gmbh/linter": "^2.0.3",
+    "@ogs-gmbh/oxlint-presets": "^1.0.3",
+    "@ogs-gmbh/vitepress-plugin-sidebar": "^1.0.3",
+    "@ogs-gmbh/vitepress-theme": "^1.1.0",
+    "@testing-library/react": "^16.3.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "4.0.18",
+    "esbuild": "^0.27.4",
+    "esbuild-plugin-d.ts": "^1.3.1",
+    "esbuild-plugin-file-copy": "2.0.0-next.0",
+    "esbuild-plugin-file-path-extensions": "^2.1.4",
+    "esbuild-plugin-package-json": "^2.0.0",
+    "eslint": "^9.39.4",
+    "fast-glob": "^3.3.3",
+    "globals": "^17.4.0",
+    "husky": "^9.1.7",
+    "jsdom": "^28.1.0",
+    "lint-staged": "^16.4.0",
+    "npm-package-json-lint": "^9.1.0",
+    "oxlint": "^1.56.0",
+    "react-dom": "^19.2.4",
+    "sass-embedded": "^1.98.0",
+    "typedoc": "^0.28.18",
+    "typedoc-plugin-frontmatter": "^1.3.1",
+    "typedoc-plugin-markdown": "^4.11.0",
+    "typescript": "^5.9.3",
+    "vite": "^8.0.1",
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-group-icons": "^1.7.1",
+    "vitest": "^4.1.0"
+  },
+  "publishConfig": {
+    "directory": "dist/main"
+  }
+}
