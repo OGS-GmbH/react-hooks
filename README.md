@@ -29,12 +29,12 @@
 
 To get a starting point, simply refer to our documentation at [ogs-gmbh.github.io/react-hooks](https://ogs-gmbh.github.io/react-hooks).
 
-## Prerequisites
+### Prerequisites
 
 - Node.js version 18 or higher
 - A package manager: e.g. npm, pnpm, ...
 
-## Installation
+### Installation
 
 Using npm:
 ```sh
