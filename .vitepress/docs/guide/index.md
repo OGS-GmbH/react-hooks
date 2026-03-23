@@ -39,5 +39,12 @@ We offer various React Hooks. Each React Hook shows its usage and is documented.
 | Hook | Use-Case |
 | --- | --- |
 | [`useAxios`](/reference/useAxios/useAxios) | Handling Axios requests |
+| [`useInitialize`](/reference/useInitialize/useInitialize) | Call only on immediate component render, not on subsequent updates |
 | [`useKey`](/reference/useKey/useKey) | Detect Key-Events |
 | [`useLatencyBoundState`](/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay |
+| [`useLazyEffect`](/reference/useLazyEffect/useLazyEffect) | Calling the effect only on updates, not on the first render |
+| [`useMounted`](/reference/useMounted/useMounted) | Checking if the component is mounted |
+| [`useMountedEffect`](/reference/useMountedEffect/useMountedEffect) | Calling the effect only when the component is mounted |
+| [`useMountedState`](/reference/useMountedState/useMountedState) | Checking if the component is mounted |
+| [`usePreviousState`](/reference/usePreviousState/usePreviousState) | Getting the previous state value |
+| [`usePromise`](/reference/usePromise/usePromise) | Handling promises |
