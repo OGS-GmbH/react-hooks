@@ -13,7 +13,6 @@
     "./node_modules/@ogs-gmbh/oxlint-presets/oxc-recommended.json",
     "./node_modules/@ogs-gmbh/oxlint-presets/promise-recommended.json",
     "./node_modules/@ogs-gmbh/oxlint-presets/unicorn-recommended.json",
-    "./node_modules/@ogs-gmbh/oxlint-presets/nextjs-recommended.json",
     "./node_modules/@ogs-gmbh/oxlint-presets/import-recommended.json"
   ]
 }

@@ -6,9 +6,9 @@
 
 ![Preview](./docs/preview.avif)
 
-<a href="./LICENSE" target="_blank"><img src="https://img.shields.io/github/license/OGS-GmbH/react-hooks?color=0f434e&logo=hackthebox&logoColor=000000&labelColor=ffffff" /></a>
-<a href="https://github.com/OGS-GmbH/react-hooks/actions/workflows/main-deploy.yml" target="_blank"><img src="https://img.shields.io/github/actions/workflow/status/OGS-GmbH/react-hooks/main-deploy.yml?color=0f434e&logo=rocket&logoColor=000000&labelColor=ffffff" /></a>
-<a href="https://www.npmjs.com/package/@ogs-gmbh/react-hooks" target="_blank"><img src="https://img.shields.io/npm/v/%40ogs-gmbh%2Freact-hooks?color=0f434e&logo=npm&logoColor=000000&labelColor=ffffff" /></a>
+<a href="./LICENSE" target="_blank"><img alt="license badge" src="https://img.shields.io/github/license/OGS-GmbH/react-hooks?color=0f434e&logo=hackthebox&logoColor=000000&labelColor=ffffff" /></a>
+<a href="https://github.com/OGS-GmbH/react-hooks/actions/workflows/main-deploy.yml" target="_blank"><img alt="workflow badge" src="https://img.shields.io/github/actions/workflow/status/OGS-GmbH/react-hooks/main-deploy.yml?color=0f434e&logo=rocket&logoColor=000000&labelColor=ffffff" /></a>
+<a href="https://www.npmjs.com/package/@ogs-gmbh/react-hooks" target="_blank"><img alt="npm badge" src="https://img.shields.io/npm/v/%40ogs-gmbh%2Freact-hooks?color=0f434e&logo=npm&logoColor=000000&labelColor=ffffff" /></a>
 
 - **Easy to Set Up**\
   Simple configuration lets you use our hooks quickly.
@@ -68,7 +68,6 @@ We offer various React Hooks. Each React Hook shows its usage and is documented.
 
 | Hook | Use-Case |
 | --- | --- |
-| [`useAxios`](https://ogs-gmbh.github.io/react-hooks/reference/useAxios/useAxios) | Handling Axios requests |
 | [`useInitialize`](https://ogs-gmbh.github.io/react-hooks/reference/useInitialize/useInitialize) | Call only on immediate component render, not on subsequent updates |
 | [`useKey`](https://ogs-gmbh.github.io/react-hooks/reference/useKey/useKey) | Detect Key-Events |
 | [`useLatencyBoundState`](https://ogs-gmbh.github.io/react-hooks/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay |

@@ -1,4 +1,3 @@
-export * from "./hooks/axios";
 export * from "./hooks/effect";
 export * from "./hooks/init";
 export * from "./hooks/key";

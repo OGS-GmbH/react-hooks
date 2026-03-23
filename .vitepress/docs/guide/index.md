@@ -38,7 +38,6 @@ We offer various React Hooks. Each React Hook shows its usage and is documented.
 
 | Hook | Use-Case |
 | --- | --- |
-| [`useAxios`](/reference/useAxios/useAxios) | Handling Axios requests |
 | [`useInitialize`](/reference/useInitialize/useInitialize) | Call only on immediate component render, not on subsequent updates |
 | [`useKey`](/reference/useKey/useKey) | Detect Key-Events |
 | [`useLatencyBoundState`](/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay |
