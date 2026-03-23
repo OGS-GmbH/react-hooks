@@ -69,8 +69,15 @@ We offer various React Hooks. Each React Hook shows its usage and is documented.
 | Hook | Use-Case |
 | --- | --- |
 | [`useAxios`](https://ogs-gmbh.github.io/react-hooks/reference/useAxios/useAxios) | Handling Axios requests |
+| [`useInitialize`](https://ogs-gmbh.github.io/react-hooks/reference/useInitialize/useInitialize) | Call only on immediate component render, not on subsequent updates |
 | [`useKey`](https://ogs-gmbh.github.io/react-hooks/reference/useKey/useKey) | Detect Key-Events |
 | [`useLatencyBoundState`](https://ogs-gmbh.github.io/react-hooks/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay |
+| [`useLazyEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useLazyEffect/useLazyEffect) | Calling the effect only on updates, not on the first render |
+| [`useMounted`](https://ogs-gmbh.github.io/react-hooks/reference/useMounted/useMounted) | Checking if the component is mounted |
+| [`useMountedEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedEffect/useMountedEffect) | Calling the effect only when the component is mounted |
+| [`useMountedState`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedState/useMountedState) | Checking if the component is mounted |
+| [`usePreviousState`](https://ogs-gmbh.github.io/react-hooks/reference/usePreviousState/usePreviousState) | Getting the previous state value |
+| [`usePromise`](https://ogs-gmbh.github.io/react-hooks/reference/usePromise/usePromise) | Handling promises |
 
 ## License
 
