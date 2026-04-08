@@ -28,9 +28,9 @@ import { useEffect, useRef, useState } from "react";
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function usePreviousState <T> (state: T, initialValue?: T): T | undefined {
+function usePreviousState<T>(state: T, initialValue?: T): T | undefined {
   const [get, set] = useState<T | undefined>(initialValue);
-  const currentValueRef = useRef<T>(state)
+  const currentValueRef = useRef<T>(state);
 
   useEffect(() => {
     set(currentValueRef.current);
@@ -40,6 +40,4 @@ function usePreviousState <T> (state: T, initialValue?: T): T | undefined {
   return get;
 }
 
-export {
-  usePreviousState
-}
+export { usePreviousState };

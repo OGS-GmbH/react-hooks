@@ -18,15 +18,15 @@ import { useCallback, useEffect, useRef, useState, type EffectCallback } from "r
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function useMountedState (): boolean {
-  const [isMounted, setIsMounted] = useState(false)
+function useMountedState(): boolean {
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
 
     () => {
       setIsMounted(false);
-    }
+    };
   }, []);
 
   return isMounted;
@@ -85,20 +85,15 @@ function useMounted(): () => boolean {
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function useMountedEffect (effect: EffectCallback): void {
+function useMountedEffect(effect: EffectCallback): void {
   const isMounted = useRef<boolean>(false);
 
   useEffect(() => {
-    if (isMounted.current)
-      return;
+    if (isMounted.current) return;
 
     isMounted.current = true;
     return effect();
   }, []);
 }
 
-export {
-  useMounted,
-  useMountedState,
-  useMountedEffect
-}
+export { useMounted, useMountedState, useMountedEffect };

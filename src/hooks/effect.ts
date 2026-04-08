@@ -19,7 +19,7 @@ import { useEffect, useRef, type EffectCallback } from "react";
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function useLazyEffect (effect: EffectCallback, deps: unknown[] = []): void {
+function useLazyEffect(effect: EffectCallback, deps: unknown[] = []): void {
   const isFirstRender = useRef<boolean>(true);
 
   useEffect(() => {
@@ -32,6 +32,4 @@ function useLazyEffect (effect: EffectCallback, deps: unknown[] = []): void {
   }, deps);
 }
 
-export {
-  useLazyEffect
-}
+export { useLazyEffect };

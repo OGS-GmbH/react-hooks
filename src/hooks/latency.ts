@@ -3,7 +3,7 @@ import { type Dispatch, type SetStateAction, useRef, useState } from "react";
 /**
  * React hook for handling state updates with a specified latency.
  * @typeParam T - Type of the initial state value.
- * @param initialValue - Initial state value 
+ * @param initialValue - Initial state value
  * @param latency - Latency in milliseconds to delay the state updates
  * @returns State as `T`
  *
@@ -15,7 +15,7 @@ import { type Dispatch, type SetStateAction, useRef, useState } from "react";
  *   useEffect(() => {
  *     setValue("updated");
  *   }, [])
- *   
+ *
  *   return (
  *     <>
  *       <!-- The value will update with a delay of 1 second after calling setValue -->
@@ -29,7 +29,10 @@ import { type Dispatch, type SetStateAction, useRef, useState } from "react";
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function useLatencyBoundState <T> (initialValue: T, latency: number): [T, Dispatch<SetStateAction<T>> ] {
+function useLatencyBoundState<T>(
+  initialValue: T,
+  latency: number
+): [T, Dispatch<SetStateAction<T>>] {
   const [latencyBound, setLatencyBound] = useState<T>(initialValue);
   const lastUpdateTime = useRef<number>(Date.now());
   const awaitingUpdates = useRef<number>(0);
@@ -45,14 +48,9 @@ function useLatencyBoundState <T> (initialValue: T, latency: number): [T, Dispat
       lastUpdateTime.current = currentUpdateTime;
       awaitingUpdates.current -= 1;
     }, latencyDiff);
-  }
+  };
 
-  return [
-    latencyBound,
-    dispatch
-  ]
+  return [latencyBound, dispatch];
 }
 
-export {
-  useLatencyBoundState
-}
+export { useLatencyBoundState };

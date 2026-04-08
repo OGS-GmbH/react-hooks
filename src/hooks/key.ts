@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 /**
  * Options for {@link useKey} hook.
@@ -13,7 +13,7 @@ type UseKeyOptions = Partial<{
    *
    * In `toggle` mode, the state is toggled on each key press, while in `normal` mode, the state is true after the key got pressed.
    */
-  mode: "toggle" | "normal"
+  mode: "toggle" | "normal";
   /**
    * Key, that should be listened for. It can be either a modifier key, that is checked with `getModifierState` method, or a regular key, that is checked with `key` property of the event.
    */
@@ -65,36 +65,30 @@ type UseKeyOptions = Partial<{
  * @category useKey
  * @since 1.0.0
  * @author Simon Kovtyk
-*/
-function useKey ({key, ctrlKey, altKey, shiftKey, metaKey, mode}: UseKeyOptions): boolean {
+ */
+function useKey({ key, ctrlKey, altKey, shiftKey, metaKey, mode }: UseKeyOptions): boolean {
   const [keyState, setKeyState] = useState<boolean>(false);
 
-  function updateKeyState (state: boolean): void {
-    setKeyState((prev) => mode === "toggle" ? !prev && state : state);
+  function updateKeyState(state: boolean): void {
+    setKeyState((prev) => (mode === "toggle" ? !prev && state : state));
   }
 
-  function onKeyDown (event: KeyboardEvent): void {
+  function onKeyDown(event: KeyboardEvent): void {
     if (key !== undefined) {
-      if (key !== event.key)
-        return setKeyState(false);
+      if (key !== event.key) return setKeyState(false);
 
-      if (event.getModifierState(key))
-        return setKeyState(true)
+      if (event.getModifierState(key)) return setKeyState(true);
     }
 
-    if (ctrlKey !== undefined && ctrlKey !== event.ctrlKey)
-      return setKeyState(false);
+    if (ctrlKey !== undefined && ctrlKey !== event.ctrlKey) return setKeyState(false);
 
-    if (altKey !== undefined && altKey !== event.altKey)
-      return setKeyState(false);
-    
-    if (shiftKey !== undefined && shiftKey !== event.shiftKey)
-      return setKeyState(false);
+    if (altKey !== undefined && altKey !== event.altKey) return setKeyState(false);
 
-    if (metaKey !== undefined && metaKey !== event.metaKey)
-      return setKeyState(false);
+    if (shiftKey !== undefined && shiftKey !== event.shiftKey) return setKeyState(false);
 
-    updateKeyState(true)
+    if (metaKey !== undefined && metaKey !== event.metaKey) return setKeyState(false);
+
+    updateKeyState(true);
   }
 
   useEffect(() => {
@@ -102,16 +96,12 @@ function useKey ({key, ctrlKey, altKey, shiftKey, metaKey, mode}: UseKeyOptions)
 
     return () => {
       window.removeEventListener("keydown", onKeyDown);
-    }
+    };
   }, []);
 
   return keyState;
 }
 
-export type {
-  UseKeyOptions
-}
+export type { UseKeyOptions };
 
-export {
-  useKey
-}
+export { useKey };

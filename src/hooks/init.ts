@@ -18,21 +18,16 @@ import { useEffect, useRef } from "react";
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function useInitialize (
-  callback: () => void
-): void {
+function useInitialize(callback: () => void): void {
   const initialized = useRef<boolean>(false);
 
   useEffect(() => {
     initialized.current = true;
   }, []);
 
-  if (initialized.current)
-    return;
+  if (initialized.current) return;
 
   callback();
 }
 
-export {
-  useInitialize
-}
+export { useInitialize };

@@ -34,7 +34,7 @@ import { useMounted } from "./mounted.js";
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function usePromise<T>(promise: Promise<T>): T | null {
+function usePromise<T>(inputPromise: Promise<T>): T | null {
   const isMounted = useMounted();
   const [state, setState] = useState<T | null>(null);
   const callback = useCallback(
@@ -52,7 +52,7 @@ function usePromise<T>(promise: Promise<T>): T | null {
     []
   );
 
-  callback(promise).then((result) => setState(result));
+  callback(inputPromise).then((result) => setState(result));
 
   return state;
 }

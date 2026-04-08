@@ -1,8 +1,8 @@
-> *We're OGS, check out our work on [github.com/ogs-gmbh](https://github.com/ogs-gmbh)*
+> _We're OGS, check out our work on [github.com/ogs-gmbh](https://github.com/ogs-gmbh)_
 
 # React Hooks
 
-*Composable Hooks for React applications.*
+_Composable Hooks for React applications._
 
 ![Preview](./docs/preview.avif)
 
@@ -37,6 +37,7 @@ To get a starting point, simply refer to our documentation at [ogs-gmbh.github.i
 ### Installation
 
 Using npm:
+
 ```sh
 $ npm install @ogs-gmbh/react-hooks
 ```
@@ -66,38 +67,42 @@ $ npm install @ogs-gmbh/react-hooks
 
 We offer various React Hooks. Each React Hook shows its usage and is documented. Please check the list below:
 
-| Hook | Use-Case |
-| --- | --- |
-| [`useInitialize`](https://ogs-gmbh.github.io/react-hooks/reference/useInitialize/useInitialize) | Call only on immediate component render, not on subsequent updates |
-| [`useKey`](https://ogs-gmbh.github.io/react-hooks/reference/useKey/useKey) | Detect Key-Events |
-| [`useLatencyBoundState`](https://ogs-gmbh.github.io/react-hooks/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay |
-| [`useLazyEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useLazyEffect/useLazyEffect) | Calling the effect only on updates, not on the first render |
-| [`useMounted`](https://ogs-gmbh.github.io/react-hooks/reference/useMounted/useMounted) | Checking if the component is mounted |
-| [`useMountedEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedEffect/useMountedEffect) | Calling the effect only when the component is mounted |
-| [`useMountedState`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedState/useMountedState) | Checking if the component is mounted |
-| [`usePreviousState`](https://ogs-gmbh.github.io/react-hooks/reference/usePreviousState/usePreviousState) | Getting the previous state value |
-| [`usePromise`](https://ogs-gmbh.github.io/react-hooks/reference/usePromise/usePromise) | Handling promises |
+| Hook                                                                                                                 | Use-Case                                                           |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| [`useInitialize`](https://ogs-gmbh.github.io/react-hooks/reference/useInitialize/useInitialize)                      | Call only on immediate component render, not on subsequent updates |
+| [`useKey`](https://ogs-gmbh.github.io/react-hooks/reference/useKey/useKey)                                           | Detect Key-Events                                                  |
+| [`useLatencyBoundState`](https://ogs-gmbh.github.io/react-hooks/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay                            |
+| [`useLazyEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useLazyEffect/useLazyEffect)                      | Calling the effect only on updates, not on the first render        |
+| [`useMounted`](https://ogs-gmbh.github.io/react-hooks/reference/useMounted/useMounted)                               | Checking if the component is mounted                               |
+| [`useMountedEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedEffect/useMountedEffect)             | Calling the effect only when the component is mounted              |
+| [`useMountedState`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedState/useMountedState)                | Checking if the component is mounted                               |
+| [`usePreviousState`](https://ogs-gmbh.github.io/react-hooks/reference/usePreviousState/usePreviousState)             | Getting the previous state value                                   |
+| [`usePromise`](https://ogs-gmbh.github.io/react-hooks/reference/usePromise/usePromise)                               | Handling promises                                                  |
 
 ## License
 
 The MIT License (MIT) - Please have a look at the [LICENSE file](./LICENSE) for more details.
 
 ## Contributing
+
 Contributions are always welcome and greatly appreciated. Whether you want to report a bug, suggest a new feature, or improve the documentation, your input helps make the project better for everyone.
 
 Feel free to submit a pull request, issue or feature request.
 
 ### Issues and Feature Requests
+
 Reporting an issue or creating a feature request is made by creating a new issue on this repository.
 
 You can create a [new issue or feature request here](../../issues/new/choose).
 
 ### Pull Requests
+
 GitHub offers a solid guideline for contributing to open source projects through pull requests, covering key practices. These best practices provide a reliable starting point for making effective contributions.
 
 You can find the [guidelines here](https://docs.github.com/get-started/exploring-projects-on-github/contributing-to-a-project).
 
 ### Code Of Conduct
+
 We are committed to keeping a welcoming, inclusive, and respectful community for everyone. To help us achieve this, we kindly ask that you adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## Disclaimer

@@ -29,4 +29,4 @@ features:
   - icon: <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-code-xml-icon lucide-code-xml" viewBox="0 0 24 24"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
     title: Composable and Scalable
     details: Designed for composability, allowing hooks to be combined seamlessly.
---- 
+---
