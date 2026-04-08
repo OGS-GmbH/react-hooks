@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { useMounted } from "./mounted";
+import { useMounted } from "./mounted.js";
 
 /**
  * React hook for handling promises. It returns the resolved value of the promise or `null` if the promise is still pending or has been rejected. The hook also ensures that state updates only occur if the component is still mounted, preventing potential memory leaks or errors from trying to update an unmounted component.
@@ -34,25 +34,27 @@ import { useMounted } from "./mounted";
  * @since 1.0.0
  * @author Simon Kovtyk
  */
-function usePromise <T> (promise: Promise<T>): T | null {
+function usePromise<T>(promise: Promise<T>): T | null {
   const isMounted = useMounted();
   const [state, setState] = useState<T | null>(null);
-  const callback = useCallback((promise: Promise<T>) => // oxlint-disable-line eslint(no-shadow)
-    new Promise<T>((resolve, reject) => {
-      const onValue = (value: T) => {
-        isMounted() && resolve(value);
-      };
-      const onError = (error: T) => {
-        isMounted() && reject(error);
-      };
-      promise.then(onValue, onError);
-    }), []);
+  const callback = useCallback(
+    (promise: Promise<T>) =>
+      // oxlint-disable-line eslint(no-shadow)
+      new Promise<T>((resolve, reject) => {
+        const onValue = (value: T) => {
+          isMounted() && resolve(value);
+        };
+        const onError = (error: T) => {
+          isMounted() && reject(error);
+        };
+        promise.then(onValue, onError);
+      }),
+    []
+  );
 
   callback(promise).then((result) => setState(result));
 
   return state;
-};
-
-export {
-  usePromise
 }
+
+export { usePromise };
