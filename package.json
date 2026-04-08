@@ -1,6 +1,6 @@
 {
   "name": "@ogs-gmbh/react-hooks",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Composable Hooks for React applications.",
   "keywords": [
     "composition-api",
