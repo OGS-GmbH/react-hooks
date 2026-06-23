@@ -1,4 +1,4 @@
-import { type Dispatch, type SetStateAction, useRef, useState } from "react";
+import { type Dispatch, type SetStateAction, useEffect, useRef, useState } from "react";
 
 /**
  * React hook for handling state updates with a specified latency.
@@ -53,4 +53,26 @@ function useLatencyBoundState<T>(
   return [latencyBound, dispatch];
 }
 
-export { useLatencyBoundState };
+function useLatencyBoundValue<T>(value: T, latency: number): T {
+  const [latencyBound, setLatencyBound] = useState<T>(value);
+  const lastUpdateTime = useRef<number>(Date.now());
+  const awaitingUpdates = useRef<number>(0);
+
+  useEffect(() => {
+    const currentUpdateTime = Date.now();
+    const currentLatency = currentUpdateTime - lastUpdateTime.current;
+    awaitingUpdates.current += 1;
+
+    const latencyDiff = awaitingUpdates.current * latency - currentLatency;
+
+    setTimeout(() => {
+      setLatencyBound(value);
+      lastUpdateTime.current = currentUpdateTime;
+      awaitingUpdates.current -= 1;
+    }, latencyDiff);
+  }, [value]);
+
+  return latencyBound;
+}
+
+export { useLatencyBoundState, useLatencyBoundValue };
