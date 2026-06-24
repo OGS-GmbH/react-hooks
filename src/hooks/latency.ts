@@ -53,6 +53,36 @@ function useLatencyBoundState<T>(
   return [latencyBound, dispatch];
 }
 
+/**
+ * React hook for replaying state updated with a specified latency.
+ * @typeParam T - Type of the initial value
+ * @param value - Initial state value
+ * @param latency - Latency in milliseconds to delay state updates
+ * @returns Value `T` with latency
+ *
+ * @example
+ * ```tsx
+ * function MyComponent () {
+ *   const [value, setValue] = useState("initial");
+ *   const latencyValue = useLatencyBoundValue(value, 1000);
+ *
+ *   useEffect(() => {
+ *     setValue("updated");
+ *   }, [])
+ *
+ *   return (
+ *     <>
+ *       <!-- The value will update with a delay of 1 second after calling setValue -->
+ *       <p>{latencyValue}</p>
+ *     </>
+ *   )
+ * }
+ * ```
+ *
+ * @category useLatencyBoundValue
+ * @since 1.0.0
+ * @author Simon Kovtyk
+ */
 function useLatencyBoundValue<T>(value: T, latency: number): T {
   const [latencyBound, setLatencyBound] = useState<T>(value);
   const lastUpdateTime = useRef<number>(Date.now());

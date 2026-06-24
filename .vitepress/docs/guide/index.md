@@ -41,6 +41,7 @@ We offer various React Hooks. Each React Hook shows its usage and is documented.
 | [`useInitialize`](/reference/useInitialize/useInitialize)                      | Call only on immediate component render, not on subsequent updates |
 | [`useKey`](/reference/useKey/useKey)                                           | Detect Key-Events                                                  |
 | [`useLatencyBoundState`](/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay                            |
+| [`useLatencyBoundValue`](/reference/useLatencyBoundValue/useLatencyBoundValue) | Replay a state change with a delay                                 |
 | [`useLazyEffect`](/reference/useLazyEffect/useLazyEffect)                      | Calling the effect only on updates, not on the first render        |
 | [`useMounted`](/reference/useMounted/useMounted)                               | Checking if the component is mounted                               |
 | [`useMountedEffect`](/reference/useMountedEffect/useMountedEffect)             | Calling the effect only when the component is mounted              |

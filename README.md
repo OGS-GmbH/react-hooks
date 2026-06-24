@@ -72,6 +72,7 @@ We offer various React Hooks. Each React Hook shows its usage and is documented.
 | [`useInitialize`](https://ogs-gmbh.github.io/react-hooks/reference/useInitialize/useInitialize)                      | Call only on immediate component render, not on subsequent updates |
 | [`useKey`](https://ogs-gmbh.github.io/react-hooks/reference/useKey/useKey)                                           | Detect Key-Events                                                  |
 | [`useLatencyBoundState`](https://ogs-gmbh.github.io/react-hooks/reference/useLatencyBoundState/useLatencyBoundState) | Like React's `useState`, but with delay                            |
+| [`useLatencyBoundValue`](https://ogs-gmbh.github.io/react-hooks/reference/useLatencyBoundValue/useLatencyBoundValue) | Replay a state change with a delay                                 |
 | [`useLazyEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useLazyEffect/useLazyEffect)                      | Calling the effect only on updates, not on the first render        |
 | [`useMounted`](https://ogs-gmbh.github.io/react-hooks/reference/useMounted/useMounted)                               | Checking if the component is mounted                               |
 | [`useMountedEffect`](https://ogs-gmbh.github.io/react-hooks/reference/useMountedEffect/useMountedEffect)             | Calling the effect only when the component is mounted              |
