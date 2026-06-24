@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/OGS-GmbH/react-hooks/compare/v1.0.1...v1.1.0) (2026-06-24)
+
+
+### Features
+
+* add latency bound value hook ([692e181](https://github.com/OGS-GmbH/react-hooks/commit/692e1811ff9d7f02b4b7390a64ab90723a03ef77))
+
 ## [1.0.1](https://github.com/OGS-GmbH/react-hooks/compare/v1.0.0...v1.0.1) (2026-04-08)
 
 
