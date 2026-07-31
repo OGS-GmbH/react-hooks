@@ -41,12 +41,7 @@ function useDebouncedCallback<T extends unknown[]>(
   callback: (...args: T) => void,
   delay: number
 ): (...args: T) => void {
-  const callbackRef = useRef(callback);
   const timeoutRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-
-  useEffect(() => {
-    callbackRef.current = callback;
-  }, [callback]);
 
   useEffect(() => () => clearTimeout(timeoutRef.current), []);
 
@@ -55,10 +50,10 @@ function useDebouncedCallback<T extends unknown[]>(
       clearTimeout(timeoutRef.current);
 
       timeoutRef.current = setTimeout(() => {
-        callbackRef.current(...args);
+        callback(...args);
       }, delay);
     },
-    [delay]
+    [delay, callback]
   );
 }
 
