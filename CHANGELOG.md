@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/OGS-GmbH/react-hooks/compare/v1.1.0...v1.2.0) (2026-07-31)
+
+
+### Features
+
+* add stable debounce hook ([a0f96df](https://github.com/OGS-GmbH/react-hooks/commit/a0f96dfd34d8853433711d2820886e6f00a8632a))
+
 ## [1.1.0](https://github.com/OGS-GmbH/react-hooks/compare/v1.0.1...v1.1.0) (2026-06-24)
 
 
